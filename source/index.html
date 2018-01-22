@@ -5,8 +5,150 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
+    <header class="page-header">
+      <!--ИСПРАВЛЕНО У тега <a> всегда должен быть атрибут href="", если он никуда не введет обычно пишут href="#" еще есть один вариант но я не помню =)), но так как он будет ввести на главную страницу, тут лучше сделать просто <div> -->
+      <a href="#" class="page-header__logo">
+        <!-- Если ничего сильно не поменяется с лого на планшетной и десктопной версии, можно будет сделать его просто текстом и через css сделать шрифт как на макете -->
+        <img class="page-header__logo-image" src="http://placehold.it/150x100" width="60" height="40" alt="PINK">
+      </a>
+      <nav class="main-nav">
+        <!-- Тут лучше сделать класс не как элемент блока main-nav, а как отдельный блок, так как такая кнопка может много где повторятся -->
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <!--ИСПРАВЛЕНО Тут можно обойтись без класса main-nav__list, так как врапер ты сделал для него можно просто воспринимать как отдельный блок с классом site-list -->
+          <ul class="site-list">
+            <li class="site-list__item site-list__item--active">
+              <!--ИЗМЕНЕНО Так же как и раньше если ссылка тут никуда не введет то пишим href="#", но лучше сделать не <a>, а <span> например-->
+              <span>Главная</span>
+            </li>
+            <li class="site-list__item">
+              <a href="C:/Users/Kirill/Desktop/test-1/source/photo.html">Фотография</a>
+            </li>
+            <li class="site-list__item">
+              <a href="C:/Users/Kirill/Desktop/test-1/source/form.html">Конкурс</a>
+            </li>
+            <li class="site-list__item">
+              <a href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="download-app">
+      <!-- Для кнопок можно сделать какой то один класс (btn - блок) сделать какой то общий который чаще всего повторяется, а потом через модификатры всякие например btn--download-app придавать им отличный дизайн от других кнопок на сайте. Я думаю тут наверное не тег <button>, а тег <a> так как при нажатии на эту кнопку она по логике должна переводить на другую страницу -->
+      <a href="#" class="download">Скачать приложение</a>
+      <!--СДЕЛАНО Тут лучше вместо тега <p> для объединения какого либо контента использовать <div>, а для абзацев <p>, иконки тут будут потом вставленны не как img, а через тег svg, потом об этом лекция будет -->
+      <div>
+        <a class="download__ios" href="#"><img class="" src="http://placehold.it/150x100" width="47" height="56"> AppStore</a>
+        <a class="download__android" href="#"><img class="" src="http://placehold.it/150x100" width="43" height="47"> Play Маркет</a>
+        <a class="download__wphone" href="#"><img class="" src="http://placehold.it/150x100" width="44" height="41"> Windows Store</a>
+      </div>
+      <p>
+        <!--СДЕЛАНО Тут можно не использовать тег <br> так как потом все равно ты ограничешь этот блок отступами в css и на планшетной и десктопной версии он может будет выглядить как вытянутый во всю строку -->
+        Доступно для IPhone, IPad, Android,
+        Windows Phone, OS X, Windows 8
+      </p>
+    </section>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Профессиональный HTML и CSS</a>», уровень 2.</p>
 
+    <main class="page-main">
+      <h1 class="visually-hidden">
+        PINK - это приложение, которое позволит взглянуть на мир по другому
+      </h1>
+      <section class="advantages">
+        <h2 class="vissually-hidden">Наши преимущества</h2>
+        <p>Устали от серости мегаполиса?</p>
+        <p>Нам есть, что вам преджложть</p>
+          <ul class="advantages__list">
+          <!-- Тут можно advantages__item сделать не как элемент, а как отдельный блок по БЭМ, так как точна такая же стилизация повтаряется у блока коментариев например (разметка в плане тегов может не обязательно повторятся, а вот стилизация будет одинаковая)-->
+            <li class="advantages-item">
+              <h3 class="advantages__title">Поднимает настроение</h3>
+              <p class="advantages__description">Приложение позволит вам победить осенюю хандру и депрессию
+                буквально в несколько кликов!
+              </p>
+            </li>
+            <li class="advantages-item">
+              <h3 class="advantages__title">Меняет мир вокруг</h3>
+              <p class="advantages__description">Сделайте снимок и украсьте его
+                смайликом или текстовой подписью,
+                чтобы усилить эффект
+              </p>
+            </li>
+            <li class="advantages-item">
+              <h3 class="advantages__title">Заводит новых друзей</h3>
+              <p class="advantages__description">Ставьте лайки, комментируйте,
+                делитесь фотографиями с друзьями и
+                заводите новых
+              </p>
+            </li>
+          </ul>
+      </section>
+      <section class="reviews">
+        <!--ДОБАВЛЕНО тут добавить h2 не помешало с class="vissual-hidden" раз уж начал делать все как надо =) -->
+        <h2 class="visually-hidden">Отзывы пользователей</h2>
+        <div class="reviews__list">
+          <blockquote class="reviews__item">
+            <cite class="reviews__author-name">Николай Петров</cite>
+            <p class="reviews__text">Это приложение перевернуло мой мир
+              и позволило пр-новому взглянуть на
+              привычные серые вещи! А еще я
+              познакомился со своей будущей женой в комментарияъ к выложенной
+              фотографии!
+            </p>
+          </blockquote>
+        </div>
+
+        <!-- Тут добавить из макета заготовку для пунктиров для слайдера =) хотя по сути его делать не нужно, но мы с тобой сделаем потом сами его -->
+      </section>
+      <section class="price-table">
+        <!--ДОБАВЛЕНО тут добавить h2 не помешало с class="vissual-hidden" раз уж начал делать все как надо =) -->
+        <h2 class="visually-hidden">Цены на приложения и доступ к функциям</h2>
+        <table>
+          <tr>
+            <th>
+               СТАНДАРТ
+               3,99 USD
+            </th>
+          </tr>
+          <!--ДОБАВЛЕНЫ ГАЛОЧКИ Тут лучше сделать отметки галочки и крестика в разметке, их потом вставишь через тег svg, так как если например не загрузится css (если честно такого я никогда не видел =D это такая немного упоротость, но делать лучше как надо) то пользователь должен понять что есть, а чего нет в данном ценовом пакете услуг -->
+          <tr><td>РОЗОВЫЙ ФИЛЬТР <img class="check" src="http://placehold.it/150x100" width="20" height="20"></td></tr>
+          <tr><td>СМАЙЛИКИ <img class="check" src="http://placehold.it/150x100" width="20" height="20"></td></tr>
+          <tr><td>КОММЕНТАРИИ <img class="check" src="http://placehold.it/150x100" width="20" height="20"></td></tr>
+        </table>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <h2 class="visually-hidden">Контаты</h2>
+      <!--СДЕЛАНО Тут лучше использовать тег <section> так как его можно именовать как "блок контактов, и можно не писать класс элемент page-footer__contacts, а просто оставить как отельный блок contacts", так же добавить h2 с class="vissual-hidden" -->
+      <section class="contacts">
+        <p>
+          Остались вопросы?<br>
+          Свяжитесь с нами!
+        </p>
+        <!--ЧТО ТО ПОМЕНЯЕТСЯ Не знаю тут по поводу <br> нужно смотреть как будет на планшете и дестопе =) -->
+        <p class="contacts__phone">
+          Звоните:<br>
+          <!--СДЕЛАНО Тут оберни телефон тегом <a> и гуглани поповоду href="tel::mail@htmlacademy.ru"  -->
+          <a href="tel:mail@htmlacademy.ru">+7 (812) 555-66-66</a>
+        </p>
+        <p class="contacts__mail">
+          Пишите:<br>
+          <!--СДЕЛАНО Тут оберни почту тегом <a> и гуглани поповоду href="mailto:mail@htmlacademy.ru" -->
+          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </p>
+        <p class="contacts__street">
+          <!--СДЕЛАНО Забыл кусок из макета -->
+          Приезжайте в гости:<br>
+          <span>ул. Большая
+          Конюшенная, 19/8</span>
+        </p>
+        <!--КАРТА БУДЕТ ДОБАВЛЕНА ЧЕРЕЗ JS Тут лучше сделать не <a> а <section> или <div> потом будет лекция сделать карту яндекс или гугл подключить =) но это как доп задача, а так можно будет оставить как картинку. Я потом кину видосик как на яндекс api сделать карту  -->
+        <section class="map">
+          Здесь будет карта<br>
+          <img src="http://placehold.it/150x100" alt="место расположение на карте" width="160" height="100">
+        </section>
+      </section>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Pink photo</title>
+</head>
+<body>
+  <header class="page-header">
+    <a class="page-header__logo">
+      <img class="page-header__logo-image" src="http://placehold.it/150x100" width="60" height="40" alt="PINK">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a href="C:/Users/Kirill/Desktop/test-1/source/index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="C:/Users/Kirill/Desktop/test-1/source/photo.html">Фотография</a>
+          </li>
+          <li class="site-list__item">
+            <a href="C:/Users/Kirill/Desktop/test-1/source/form.html">Конкурс</a>
+          </li>
+          <li class="site-list__item">
+            <a href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+</header>
+
+    <main>
+      <section>
+        <!--СДЕЛАНО Тут br не нужны, так же лучше в div обернуть заголовок, а лучше в <header> обернуть заголовок и <p> и там h2 обернуть в div =) и <p> тоже лучше сдеть с классом по бэм как отдельный блок, так как на странице много такого же вида =) -->
+        <div>
+          <h2>Фотографии пользователей</h2>
+        </div>
+        <p class="">Взгляните на фотографии, которые
+        выкладывают пользователи!
+        Видите, как не хватает ваших?
+        </p>
+        <ul>
+          <li>
+            <figure>
+              <!--СДЕЛАНО img лучше обернуть дополнительным div -->
+              <div class="post-photo">
+                <a href="#"><img src="http://placehold.it/150x100" alt="ПАНОРАМА ДНЯ" width="250" height="150"></a>
+              </div>
+              <figcaption>
+                <!--СДЕЛАНО Тут br не нужны так же лучше обернуть Анна (5 МИНУТ НАЗАД) обернуть в div например, а остальной текст в <p> -->
+                <section class="post">
+                  <div class="post__header">
+                    <b>Анна</b> <time>(5 МИНУТ НАЗАД)</time>
+                  </div>
+                </section>
+                <section class="post__body">
+                  <p class="post__comment">Прыгать или нет? Напишите в
+                  комментарии свой совет и смотрите
+                  прямую трансляцию в перископе,
+                  задавайте свои вопросы!</p>
+                </section>
+              </figcaption>
+              <section class="post__footer">
+                <!--СДЕЛАНО type="button" забыл написать и img потом будет заменена на svg, и лучше button, label и input обернуть div, тут если смотреть на макет можно разбить блок с фото на 3 смысловых элемента хедер это там где анна (5 минут назад), центральная часть текст и футер кнопка с нравится,  -->
+                <button type="button">
+                  <img src="http://placehold.it/150x100" alt="like" width="10" height="10">
+                </button>
+                <!--СДЕЛАНО тут label и input не нужен так как это не форма, а если нужно было бы выводить тут количество лайков, это все равно все было бы обернуто в span обычный и туда просто прокидывались в текстовом формате данные о лайках -->
+                <span class="">НРАВИТСЯ:</span>
+                <span class="">215</span>
+              </section>
+            </figure>
+          </li>
+          <li>
+              <figure>
+                <div class="post-photo">
+                  <a href="#"><img src="http://placehold.it/150x100" alt="Машина" width="250" height="150"></a>
+                </div>
+                <figcaption>
+                  <section class="post">
+                    <div class="post__header">
+                      <b>Левон</b> <time>(5 ЧАСОВ НАЗАД)</time>
+                    </div>
+                  </section>
+                  <section class="post__body">
+                    <p class="post__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                  </section>
+                </figcaption>
+                <section class="post__footer">
+                  <button><img src="http://placehold.it/150x100" alt="like" width="10" height="10"></button>
+                  <span class="">НРАВИТСЯ:</span>
+                  <span class="">356</span>
+                </section>
+              </figure>
+          </li>
+          <li>
+              <figure>
+                <div class="post-photo">
+                  <a href="#"><img src="http://placehold.it/150x100" alt="Барабаны" width="250" height="150"></a>
+                </div>
+                <figcaption>
+                  <section class="post">
+                    <div class="post__header">
+                      <b>Антон</b> <time>(12 ЧАСОВ НАЗАД)</time>
+                    </div>
+                  </section>
+                  <section class="post__body">
+                    <p class="post__comment">Соседи будут рады!</p>
+                  </section>
+                </figcaption>
+                <section class="post__footer">
+                  <button><img src="http://placehold.it/150x100" alt="like" width="10" height="10"></button>
+                  <span class="">НРАВИТСЯ:</span>
+                  <span class="">666</span>
+                </section>
+              </figure>
+          </li>
+          <li>
+              <figure>
+                <div class="post-photo">
+                  <a href="#"><img src="http://placehold.it/150x100" alt="Стеклянная крыша" width="250" height="150"></a>
+                </div>
+                <figcaption>
+                  <section class="post">
+                    <div class="post__header">
+                      <b>Борис</b> <time>(20 ЧАСОВ НАЗАД)</time>
+                    </div>
+                  </section>
+                  <section class="post__body">
+                    <p class="post__body post__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                  </section>
+                </figcaption>
+                <section class="post__footer">
+                  <button><img src="http://placehold.it/150x100" alt="like" width="10" height="10"></button>
+                  <span class="">НРАВИТСЯ:</span>
+                  <span class="">215</span>
+                </section>
+              </figure>
+          </li>
+          <li>
+              <figure>
+                <div class="post-photo">
+                  <a href="#"><img src="http://placehold.it/150x100" alt="Кубанская бахча" width="250" height="150"></a>
+                </div>
+                <figcaption>
+                  <section class="post">
+                    <div class="post__header">
+                      <b>Сергей</b> <time>(25 ЧАСОВ НАЗАД)</time>
+                    </div>
+                  </section>
+
+                    <section class="post__body">
+                      <p class="post__comment">Самая кубанская в мире!</p>
+                    </section>
+                </figcaption>
+                    <section class="post__footer">
+                      <button><img src="http://placehold.it/150x100" alt="like" width="10" height="10"></button>
+                      <span class="">НРАВИТСЯ:</span>
+                      <span class="">4</span>
+                    </section>
+
+              </figure>
+          </li>
+          <li>
+              <figure>
+                <div class="post-photo">
+                  <a href="#"><img src="http://placehold.it/150x100" alt="Ноги и горы" width="250" height="150"></a>
+                </div>
+                <figcaption>
+                  <section class="post">
+                    <div class="post__header">
+                      <b>Максим</b> <time>(40 ЧАСОВ НАЗАД)</time>
+                    </div>
+                  </section>
+                    <section class="post__body">
+                      <p class="post__comment">Где снег-то?</p>
+                    </section>
+                </figcaption>
+                  <section class="post__footer">
+                    <button><img src="http://placehold.it/150x100" alt="like" width="10" height="10"></button>
+                    <span class="">НРАВИТСЯ:</span>
+                    <span class="">150</span>
+                  </section>
+              </figure>
+          </li>
+          <li>
+              <figure>
+                <div class="post-photo">
+                  <a href="#"><img src="http://placehold.it/150x100" alt="Крыло самолета" width="250" height="150"></a>
+                </div>
+                <figcaption>
+                  <section class="post">
+                    <div class="post__header">
+                      <b>Надежда</b> <time>(45 ЧАСОВ НАЗАД)</time>
+                    </div>
+                    <div class="post__body">
+                      <p class="post__comment">Всем GM и взаимные лайки!</p>
+                    </div>
+                </figcaption>
+                    <div class="post__footer">
+                      <button><img src="http://placehold.it/150x100" alt="like" width="10" height="10"></button>
+                      <span class="">НРАВИТСЯ:</span>
+                      <span class="">2560</span>
+                    </div>
+                  </section>
+              </figure>
+          </li>
+        </ul>
+      </section>
+      <!--СДЕЛАНО br не нужны =) и как я говорил лучше этот элемент сделать с классом по бэм как отдельный блок, и можно даже я думаю обернуть его в div -->
+      <div class="">Затмите их всех!
+        Выкладывайте все, что накопилось в
+        телефоне!
+      </div>
+      <form>
+        <section class="publish-editor">
+        <h3 class="visaully-hidden">Фотография для редактироваения</h3>
+        <!-- Если я не ошибаюсь когда я проходил все img нужно что бы были обернуты в div вспомогательный, это что то связанно с выпадением фотки из блока =) точно не помню но где то это должно быть прописано -->
+        <div class="publish-editor__photo">
+          <img src="http://placehold.it/150x100" alt="фотография для редактирования и публикации">
+        </div>
+        <input type="file">
+        <!--СДЕЛАНО Для объединения элементов использовать лучше <div>, а <p> используется только для текстового контента (он как параграф). Но ведет себя как блочный элемент тянется на всю страницу (width: 100% и выталкивает все элементы на новую строку) ну это так отступление.-->
+        <div>
+          <!--ВЗЯТО НА ВООРУЖЕНИЕ Если бы нужно было его делать рабочим с помощью js =) потом можно будет попробовать сделать, тут будет type="radio" типа радио батон всегда выбран только один, так как это радио у них name должен быть одинаковым, а value разным, так же первому прописать checked="checked" -->
+          <input type="radio" name="edit" value="Crop" checked><span>кадрирование</span>
+          <input type="radio" name="edit" value="Ведро"><span>ведро с краской</span>
+          <input type="radio" name="edit" value="Contrast"><span>контраст</span>
+        </div>
+        <!--СДЕЛАНО тоже обернуть лучше в <div>, а не <p> -->
+        <div>
+          <input id="slider-edit" name="slider" type="range" min="1" max="100">
+        </div>
+
+        <section class="">
+          <footer>
+            <!--СДЕЛАНО эту часть можно обернуть в тег <footer> и сделать все <button>, а не <input>, и вообще сейчас никогда не делать лучше кнопки интупатами, теперь для этого есть тег <button type="reset"> и <button type="submit">, а так же что бы работали встроенный функционал reset и submit нужно все содержимое блока publish-editor обернуть в форму form -->
+            <button type="submit" name="share" value="Запостить">Запостить</button>
+            <button type="reset" name="cancle" value="Отмена">Отмена</button>
+          </footer>
+        </section>
+        </section>
+      </form>
+    </main>
+
+    <footer>
+      <section>
+        <!--СДЕЛАНО обернуть img вспомогательный div выше писал об этом-->
+        <div class="">
+          <img class="page-footer__logo-image" src="http://placehold.it/150x100" width="147" height="40">
+        </div>
+        <!--СДЕЛАНО тут можно обойтись без класса page-footer__social -->
+        <div class="social">
+          <ul class="social__list">
+            <li class="social__item">
+              <!-- social-button или social-btn, или можно сделать как btn (общий класс для всех кнопок), а потом через модификатор btn--social-btn придать нужный ввид, я бы их так назвал и по БЭМ вынес как отдельный блок, а не элемент social (тут я говорю не о html разметке блоки элементы, а в контексте css и классов именования бэм методологии =)). Потом так же мы картинки будем вставлять через тег svg чтобы можно было эффекты при наведении делать на них через css -->
+              <a class="social__link social__link-twitter" href="#">Twitter</a>
+            </li>
+            <li class="social__item">
+                <a class="social__link social__link-facebook" href="#">facebook</a>
+            </li>
+            <li class="social__item">
+                <a class="social__link social__link-play" href="#">Какая то херня "Play"</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!--ИЗМЕНИНО article это нормльно все, но вот figure тут не нужен, он используется больше только для каких то фото, а для таких вещей он не нужен, и лучше этот блок обозвать как копирайт -->
+      <article class="copyright">
+        <div>
+            <span>Разработано</span>
+            <img src="http://placehold.it/150x100" alt="логотип htmlacademy" width="27" height="34">
+        </div>
+      </article>
+    </footer>
+</body>
+</html>
