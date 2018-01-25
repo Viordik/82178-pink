@@ -1,0 +1,31 @@
+$base-color: white;
+$text-color: #d22856;
+$page-size-w: 320px;
+
+
+.btn--download {
+  display: block;
+  box-sizing: border-box;
+  padding: 6px;
+
+  width: 281px;
+  height: 40px;
+  max-width: $page-size-w;
+  border: 2px;
+  border-style: solid;
+  border-radius: 25px;
+  border-color: white;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+  font-size: 18px;
+  font-style: bold;
+}
+
+.btn--download:hover,
+.btn--download:active {
+  background: white;
+  color: $text-color;
+  transition: all 0.5s ease-in;
+}
