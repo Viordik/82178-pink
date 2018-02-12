@@ -1,12 +1,5 @@
-@import "header.scss";
-@import "download-app.scss";
-@import "advantages.scss";
-@import "html.scss";
-@import "contacts.scss";
-@import "achievements.scss";
-@import "travel-app.scss";
-@import "block-social.scss";
-@import "pink-font.scss";
-@import "data-name-form.scss";
-@import "btn.scss";
-@import "main-menu-nav.scss";
+@import "./fonts.scss";
+
+@import "./blocks/page-header.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/site-list.scss";

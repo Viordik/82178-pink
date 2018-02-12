@@ -1,0 +1,24 @@
+/*.checkbox__input {
+  display: none;
+}
+
+.checkbox__input:checked + .checkbox__custom::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  width: 5px;
+  height: 15px;
+  border: 2px solid pink;
+  border-left: none;
+  border-top: none;
+  transform: rotate(45deg) translate(-40%, 0);
+}
+
+.checkbox__custom {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+}*/
