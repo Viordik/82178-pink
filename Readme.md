@@ -1,6 +1,6 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Кирилл Костиков](https://up.htmlacademy.ru/adaptive/13/user/82178).
+* Студент: [Николай Фаталиев](https://up.htmlacademy.ru/adaptive/13/user/82178).
 * Наставник: `Я буду работать без наставника`.
 
 ---

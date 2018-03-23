@@ -1,0 +1,65 @@
+$hoverColor: #d22856;
+$activeColor: #505d69;
+
+.site-list {
+  position: absolute;
+  list-style: none;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.site-list__item {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 25px;
+  background-color: #283645;
+  color: white;
+  text-transform: uppercase;
+  border-top: 1px solid #485461;
+  border-bottom: 1px solid black;
+  text-align: center;
+  margin: 0;
+}
+
+@media (min-width: 1200px) {
+  .site-list {
+    display: flex;
+    position: static;
+    flex-direction: row;
+  }
+
+  .site-list__item {
+    padding: 14px 0;
+    margin: 0 29px;
+    border: none;
+    background-color: none;
+    text-transform: capitalize;
+
+    &--active {
+      border-bottom: 2px solid white;
+    }
+  }
+
+  .site-list__item-link {
+    text-decoration: none;
+    color: white;
+    transition: 300ms color, 300ms active;
+
+    &:hover {
+      color: $hoverColor;
+    }
+
+    &:active {
+      color: $activeColor;
+    }
+  }
+}
+
