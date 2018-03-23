@@ -1,0 +1,61 @@
+.question-answer {
+  width: 202px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  color: #283645;
+  padding: 0 58px;
+}
+
+.advantages__list {
+  width: 259px;
+  padding: 0 30px;
+  list-style: none;
+  text-align: center;
+}
+
+.advantages__title {
+  font-size: 18px;
+  color: black;
+  font-weight: 700;
+}
+
+.advantages__description {
+  font-size: 14px;
+  color: #283645;
+  font-weight: 400px;
+}
+
+@media (min-width: 768px) {
+  .advantages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 640px;
+    height: 695px;
+  }
+
+  .question-answer {
+    width: 620px;
+  }
+
+  .advantages__list {
+    position: relative;
+    left: 369px;
+    margin: 0;
+    padding: 0;
+    width: 306;
+    text-align: left;
+  }
+
+  .advantages__list-item {
+    padding-right: 20px;
+  }
+}
+
+/* @media (min-width: 1200px) {
+  .question-answer {
+    width: 732px;
+    font-size: 50px;
+  }
+}*/

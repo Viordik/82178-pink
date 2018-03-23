@@ -3,131 +3,151 @@
 <head>
   <meta charset="utf-8" />
   <title>Form PINK</title>
-  <link href="../source/css/style.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
 </head>
-<body>
-    <header class="page-header">
-        <a class="page-header__logo" href="C:/Users/Kirill/Desktop/test-1/source/index.html">
-          <img class="page-header__logo-image" src="http://placehold.it/150x100" width="60" height="40" alt="PINK-main-page">
-        </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list site-list">
-              <li class="site-list__item site-list__item--active">
-                <a href="C:/Users/Kirill/Desktop/test-1/source/index.html">Главная</a>
-              </li>
-              <li class="site-list__item">
-                <a href="C:/Users/Kirill/Desktop/test-1/source/photo.html">Фотография</a>
-              </li>
-              <li class="site-list__item">
-                <a href="C:/Users/Kirill/Desktop/test-1/source/form.html">Конкурс</a>
-              </li>
-              <li class="site-list__item">
-                <a href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+<body style="margin: 0">
+  <header class="page-header">
+    <!--ИСПРАВЛЕНО У тега <a> всегда должен быть атрибут href="", если он никуда не введет обычно пишут href="#" еще есть один вариант но я не помню =)), но так как он будет ввести на главную страницу, тут лучше сделать просто <div> -->
+    <a href="#" class="page-header__logo">
+      <!-- Если ничего сильно не поменяется с лого на планшетной и десктопной версии, можно будет сделать его просто текстом и через css сделать шрифт как на макете -->
+      <img class="page-header__logo-image" src="http://placehold.it/150x100" width="60" height="40" alt="PINK">
+    </a>
+    <nav class="main-nav">
+      <!-- Тут лучше сделать класс не как элемент блока main-nav, а как отдельный блок, так как такая кнопка может много где повторятся -->
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <div class="main-nav__wrapper">
+        <!--ИСПРАВЛЕНО Тут можно обойтись без класса main-nav__list, так как врапер ты сделал для него можно просто воспринимать как отдельный блок с классом site-list -->
+        <ul class="site-list">
+          <li class="site-list__item site-list__item--active">
+            <!--ИЗМЕНЕНО Так же как и раньше если ссылка тут никуда не введет то пишим href="#", но лучше сделать не <a>, а <span> например-->
+            <!-- <span>Главная</span> -->
+            <a class="site-list__item-link" href="./index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__item-link" href="./photo.html">Фотография</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__item-link" href="./form.html">Конкурс</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__item-link" href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--<div>
+      <img class="iphone-hand" src="../source/img/iphone-hand-mobile@1x.png" width="260px" height="290px">
+    </div>-->
+  </header>
 
-  <main>
-    <section class="data-name">
-      <p class="">
-        Поделитесь своей историей и получите<br>
-        шанс выиграть ценный приз - 1000<br>
-        миль на вашу бонусную карту!
+  <main class="page-form">
+    <section class="data-name-form">
+      <p class="history">
+        Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
       </p>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <label class="pink-font" for="family-name">ФАМИЛИЯ:</label><br>
+        <label class="pink-font--user-field" for="family-name">ФАМИЛИЯ:</label><br>
          <input class="family-feild" id="family-name" type="text" name="family-name" required placeholder="Укажите фамилию*">
 
-        <p><label class="pink-font" for="user-name">ИМЯ:</label><br>
+        <p class="indent">
+          <label class="pink-font--user-field" for="user-name">ИМЯ:</label><br>
           <input class="family-feild" id="user-name" type="text" name="user-name" required placeholder="Укажите ваше имя*">
         </p>
 
-        <p><label class="pink-font" for="middle-name">ОТЧЕСТВО:</label><br>
+        <p class="indent">
+          <label class="pink-font--user-field" for="middle-name">ОТЧЕСТВО:</label><br>
           <input class="family-feild" id="middle-name" type="text" name="middle-name" placeholder="Ну и отчество тоже">
         </p>
     </section>
 
-      <div class="achievements">
-        <p class="pink-font">ВАШИ БЕЗБАШЕННЫЕ<br>
-           ДОСТИЖЕНИЯ В ПУТЕШЕСТВИИ
-        </p>
-
-        <p>
-          <input id="check-1" type="checkbox" name="" checked>
-            <label for="check-1">Сделал селфи с акулой</label><br>
-          <input id="check-2" type="checkbox" name="" checked>
-            <label for="check-2">Обгорел на пляже</label><br>
-          <input id="check-3" type="checkbox" name="">
-            <label for="check-3">Видел Чака Норриса</label><br>
-          <input id="check-4" type="checkbox" name="">
-            <label for="check-4">Накупил сувениров</label><br>
-          <input id="check-5" type="checkbox" name="" checked>
-             <label for="check-5">Удержал башню</label><br>
-          <input id="check-6" type="checkbox" name="">
-            <label for="check-6">Разгромил отель</label><br>
-        </p>
+    <section class="achievements-form">
+      <div class="achievements-form__crazy">
+        <p class="pink-font--achievements">ваши безбашенные достижения в путешествии</p>
       </div>
       <p>
-        <label class="pink-font" for="phone-number">НОМЕР ТЕЛЕФОНА</label><br>
-        <input id="phone-number" type="number" name="phone-number" placeholder="Номер, пожалуйства">
+        <label class="checkbox__label" for="check-1">
+          <span class="checkbox__title">Сделал селфи с акулой</span>
+          <input class="checkbox__input" id="check-1" type="checkbox" name="" checked>
+          <span class="checkbox__custom"></span>
+        </label><br>
+          <input class="checkbox__input" id="check-2" type="checkbox" name="" checked>
+            <label class="checkbox__label" for="check-2">Обгорел на пляже</label><br>
+          <input class="checkbox__input" id="check-3" type="checkbox" name="">
+            <label class="checkbox__label" for="check-3">Видел Чака Норриса</label><br>
+          <input class="checkbox__input" id="check-4" type="checkbox" name="">
+            <label class="checkbox__label" for="check-4">Накупил сувениров</label><br>
+          <input class="checkbox__input" id="check-5" type="checkbox" name="" checked>
+             <label class="checkbox__label" for="check-5">Удержал башню</label><br>
+          <input class="checkbox__input" id="check-6" type="checkbox" name="">
+            <label class="checkbox__label" for="check-6">Разгромил отель</label><br>
       </p>
-      <p>
-        <label class="pink-font" for="email">АДРЕС ПОЧТЫ</label><br>
-        <input id="email" type="email" name="email" required placeholder="Введите почту*">
-      </p>
-      <div class="travel-app">
-        <p>
-          <label class="pink-font">С КАКИМ ПРИЛОЖЕНИЕМ<br>
-          ПУТЕШЕСТВОВАЛИ?<br><br></label>
-          <input id="ios-field" type="radio" name="mobile-os" value="for-ios" checked>
-            <label for="ios-field">Pink для IOS</label><br>
-          <input id="android-field" type="radio" name="mobile-os" value="for-android">
-            <label for="android-field">Pink для Android</label><br>
-          <input id="windows-phone-field" type="radio" name="mobile-os" value="for-windphone">
-            <label for="windows-phone-field">Windows Phone</label><br>
-        </p>
+    </section>
+    <section class="contact-field-form">
+      <div class="contact-info">
+        <p class="contact-info__title">контактная информация</p>
       </div>
-
       <p>
-        <label class="pink-font" for="id=comment-field">ОПИШИТЕ СВОИ ЭМОЦИИ<br></label>
-        <textarea id="comment-field" name="comment" cols="25" rows="10" minlength="10" maxlength="300" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        <label class="pink-font--contact" for="phone-number">НОМЕР ТЕЛЕФОНА</label><br>
+        <input class="tel-email" id="phone-number" type="text" name="phone-number" placeholder="Номер, пожалуйства">
       </p>
-      <input src="https://echo.htmlacademy.ru" type="submit" value="ОТПРАВИТЬ ФОРМУ"><br><br>
-      <small>
-        <sup class="pink-font">*</sup> - ОБЯЗАТЕЛЬНЫЕ ПОЛЯ
+      <p>
+        <label class="pink-font--contact" for="email">АДРЕС ПОЧТЫ</label><br>
+        <input class="tel-email" id="email" type="email" name="email" required placeholder="Введите почту*">
+      </p>
+    </section>
+    <div class="travel-app-form">
+      <p>
+        <label class="pink-font--travel-app">С КАКИМ ПРИЛОЖЕНИЕМ ПУТЕШЕСТВОВАЛИ?</label><br><br>
+        <input id="ios-field" type="radio" name="mobile-os" value="for-ios" checked>
+        <label for="ios-field">Pink для IOS</label><br>
+        <input id="android-field" type="radio" name="mobile-os" value="for-android">
+        <label for="android-field">Pink для Android</label><br>
+        <input id="windows-phone-field" type="radio" name="mobile-os" value="for-windphone">
+        <label for="windows-phone-field">Windows Phone</label><br>
+      </p>
+    </div>
+    <div class="emotions-form">
+      <p>
+        <label class="pink-font--comment-field" for="id=comment-field">опишите свои эмоции<br></label>
+        <textarea class="comment-field" id="comment-field" name="comment" cols="25" rows="10" minlength="10" maxlength="300" wrap="wrap" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+      </p>
+      <button class="send-form" src="https://echo.htmlacademy.ru" type="submit" value="ОТПРАВИТЬ ФОРМУ"><span class="submit-forms">ОТПРАВИТЬ ФОРМУ</span></button><br><br>
+      <small class="">
+        <sup class="pink-font--footnote">*</sup> <span class="required-fields">- ОБЯЗАТЕЛЬНЫЕ ПОЛЯ</span>
       </small>
+    </div>
     </form>
   </main>
 
-  <footer>
+  <footer class="social__contacts">
     <section class="block-social">
-    <img class="page-footer__logo-image" src="http://placehold.it/150x100" width="147" height="40">
-    <div class="page-footer__social social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link-twitter" href="#">Twitter</a>
-        </li>
-        <li class="social__item">
-            <a class="social__link social__link-facebook" href="#">facebook</a>
-        </li>
-        <li class="social__item">
-            <a class="social__link social__link-play" href="#">Какая то херня "Play"</a>
-        </li>
-      </ul>
-    </div>
-    <article class="copyright">
-      <figure class="developer">
-        <p>
-          <img src="http://placehold.it/150x100" alt="логотип htmlacademy" width="27" height="34">
-          <figcaption>Разработано</figcaption>
-        </p>
-      </figure>
-    </article>
+        <!--СДЕЛАНО обернуть img вспомогательный div выше писал об этом-->
+        <div class="">
+          <img class="page-footer__logo-image" src="./img/logo-pink-blue-mobile.svg" width="147" height="40">
+        </div>
+        <!--СДЕЛАНО тут можно обойтись без класса page-footer__social -->
+        <div class="social">
+          <ul class="social__list">
+            <li class="social__item">
+              <!-- social-button или social-btn, или можно сделать как btn (общий класс для всех кнопок), а потом через модификатор btn--social-btn придать нужный ввид, я бы их так назвал и по БЭМ вынес как отдельный блок, а не элемент social (тут я говорю не о html разметке блоки элементы, а в контексте css и классов именования бэм методологии =)). Потом так же мы картинки будем вставлять через тег svg чтобы можно было эффекты при наведении делать на них через css -->
+              <a class="social__link social__link-twitter" href="#"><img src="./img/icon-twitter.svg" alt="twitter" width="46" height="46"></a>
+            </li>
+            <li class="social__item">
+                <a class="social__link social__link-facebook" href="#"><img src="./img/icon-facebook.svg" alt="facebook" width="46" height="46"></a>
+            </li>
+            <li class="social__item">
+                <a class="social__link social__link-youtube" href="#"><img src="./img/icon-youtube.svg" alt="youtube" width="46" height="46"></a>
+            </li>
+          </ul>
+        </div>
+        <!--ИЗМЕНИНО article это нормльно все, но вот figure тут не нужен, он используется больше только для каких то фото, а для таких вещей он не нужен, и лучше этот блок обозвать как копирайт -->
+      <article class="copyright">
+        <span class="developer">Разработано</span>
+        <img class="logo-htmlacademy" src="./img/logo-htmlacademy.svg" alt="логотип htmlacademy" width="27" height="34">
+      </article>
+    </section>
   </footer>
 
+  <script src="./js/index.js"></script>
 </body>
 </html>

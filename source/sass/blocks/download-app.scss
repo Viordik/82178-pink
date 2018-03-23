@@ -1,0 +1,14 @@
+.download-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  height: 271px;
+  background-color: #283645;
+}
+
+@media (min-width: 768px) {
+  .download-app {
+    width: 620px;
+  }
+}

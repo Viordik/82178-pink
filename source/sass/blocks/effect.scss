@@ -1,0 +1,61 @@
+.effect {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .effect {
+    width: 620px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .timer__inner-circle {
+    position: relative;
+    right: 225px;
+    bottom: 20px;
+  }
+
+  .timer__hours {
+    position: relative;
+    right: 375px;
+    bottom: 90px;
+  }
+
+  .timer__hours {
+    color: #d22856;
+    font-size: 96px;
+    font-weight: 700;
+  }
+
+  .description {
+    position: relative;
+    bottom: 305px;
+    left: 300px;
+    width: 295px;
+    text-align: left;
+  }
+
+  .description__caption {
+    font-size: 30px;
+    color: black;
+    width: 162px;
+  }
+
+  .description__scientists {
+    font-size: 14px;
+    color: #283645;
+  }
+
+  .research {
+    position: relative;
+    bottom: 100px;
+    left: 5px;
+    text-align: left;
+  }
+
+  .research__link {
+    font-size: 18px;
+    color: #d22856;
+  }
+}

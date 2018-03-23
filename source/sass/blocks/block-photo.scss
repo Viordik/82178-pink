@@ -1,0 +1,39 @@
+.list-photo {
+  list-style: none;
+  padding: 0;
+  width: 320px;
+}
+
+figure {
+  margin: 0;
+}
+
+.post {
+  padding-bottom: 20px;
+}
+
+figcaption {
+  position: relative;
+  top: -4px;
+  margin: auto;
+  padding: 0 20px;
+  width: 240px;
+  background-color: white; //временный цвет
+  text-align: left;
+}
+
+.post__header {
+  font-size: 14px;
+  color: #283645;
+  font-size: 400;
+}
+
+.post__comment {
+  font-size: 12px;
+  color: #283645;
+  font-weight: 300;
+}
+
+.post__footer {
+  padding-bottom: 26px;
+}

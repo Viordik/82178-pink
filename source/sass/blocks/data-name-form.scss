@@ -1,0 +1,72 @@
+.data-name-form {
+
+}
+
+.history {
+  font-size: 14px;
+  color: #283645;
+  width: 270px;
+  height: 75px;
+  text-align: center;
+}
+
+.pink-font--user-field {
+  font-size: 14px;
+  color: #D22856;
+  font-weight: 400;
+}
+
+.family-feild {
+  width: 276px;
+  height: 59px;
+  border: 2px solid;
+  border-color: #e5e5e5;
+
+  &:focus {
+    border-color: #283645;
+  }
+
+  &:active {
+    border-color: #d22856;
+  }
+
+  &::placeholder {
+    font-size: 18px;
+    font-weight: 400;
+    color: #283645;
+    text-align: left;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .data-name-form {
+    width: 620px;
+  }
+
+  .history {
+    font-size: 18px;
+    width: 487px;
+    height: 79px;
+  }
+
+  .family-feild {
+    width: 521px;
+    height: 59px;
+  }
+}
+
+@media (min-width:1200px) {
+  .data-name-form {
+    width: 940px;
+  }
+
+  .history {
+    width: 752px;
+    height: 49px;
+  }
+
+  .family-feild {
+    width: 337px;
+  }
+}

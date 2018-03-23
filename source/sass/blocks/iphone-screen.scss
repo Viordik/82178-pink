@@ -1,0 +1,27 @@
+.iphone-screen {
+  width: 280px;
+  margin: 0 20px;
+}
+
+.iphone-screen__smile {
+  content: '';
+  padding: 0 62px;
+  width: 157px;
+  height: 320px;
+}
+
+@media (min-width: 768px) {
+  .iphone-screen {
+    position: relative;
+    padding-left: 20px;
+    margin: 0;
+    right: 250px;
+    width: 268px;
+  }
+
+  .iphone-screen__smile {
+    padding: 0;
+    width: 268px;
+    height: 547px;
+  }
+}

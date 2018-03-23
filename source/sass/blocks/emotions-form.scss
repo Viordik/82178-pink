@@ -1,0 +1,62 @@
+.emotions-form {
+
+}
+
+.pink-font--comment-field {
+  font-size: 14px;
+  color: #D22865;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.comment-field {
+  resize: none;
+  overflow: auto;
+  width: 276px;
+  height: 197px;
+  border: 2px solid;
+  border-color: #e5e5e5;
+
+  &::placeholder {
+    font-size: 18px;
+    color: #283645;
+  }
+}
+
+.send-form {
+  width: 276px;
+  height: 59px;
+  background-color: #2AAB6D;
+  border: 2px;
+  border-color: #2AAB6D;
+  border-radius: 2px;
+
+  .submit-forms {
+    font-size: 18px;
+    color: #ffffff;
+  }
+}
+
+.pink-font--footnote {
+  color: #D22865;
+}
+
+.required-fields {
+  font-size: 14px;
+  color: #283645;
+}
+
+@media (min-width: 768px) {
+  .emotions-form {
+    border: 2px solid;
+    border-color: #e5e5e5;
+    width: 616px;
+    height: 289px;
+  }
+
+  .comment-field {
+    outline-style: none;
+    width: 496px;
+    height: 189px;
+  }
+}

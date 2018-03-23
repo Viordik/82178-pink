@@ -1,0 +1,46 @@
+.reviews__list {
+  width: 280px;
+  text-align: center;
+}
+
+.reviews__author-name {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.reviews__text {
+  color: #283645;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.work {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .reviews {
+    width: 620px;
+  }
+
+  .reviews__list {
+    width: 617px;
+  }
+
+  .reviews__author-name {
+    font-size: 20px;
+  }
+
+  .work {
+    display: block;
+    font-size: 14px;
+    color: #283645;
+    font-weight: 400;
+  }
+
+  .reviews__text {
+    font-size: 18px;
+  }
+}

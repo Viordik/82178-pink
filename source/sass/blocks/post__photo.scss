@@ -1,0 +1,15 @@
+.post__photo {
+  padding: 0 20px;
+}
+
+.post__photo--panorama {
+  margin: auto;
+}
+
+
+@media (min-width: 768px) {
+  .post__photo--panorama {
+    width: 660px;
+    height: 509px;
+  }
+}

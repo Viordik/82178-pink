@@ -2,16 +2,11 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Пинк</title>
-    <link href="../source/css/style.css" rel="stylesheet">
-    <link href="../source/fonts/opensans.woff" rel="stylesheet">
-    <link href="../source/fonts/opensans.woff2" rel="stylesheet">
-    <link href="../source/fonts/opensansbold.woff" rel="stylesheet">
-    <link href="../source/fonts/opensansbold.woff2" rel="stylesheet">
-    <link href="../source/fonts/opensanslight.woff" rel="stylesheet">
-    <link href="../source/fonts/opensanslight.woff2" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body style="margin: 0">
     <header class="page-header">
       <!--ИСПРАВЛЕНО У тега <a> всегда должен быть атрибут href="", если он никуда не введет обычно пишут href="#" еще есть один вариант но я не помню =)), но так как он будет ввести на главную страницу, тут лучше сделать просто <div> -->
       <a href="#" class="page-header__logo">
@@ -29,34 +24,39 @@
               <span>Главная</span>
             </li>
             <li class="site-list__item">
-              <a href="C:/Users/Kirill/Desktop/test-1/source/photo.html">Фотография</a>
+              <a class="site-list__item-link" href="./photo.html">Фотография</a>
             </li>
             <li class="site-list__item">
-              <a href="C:/Users/Kirill/Desktop/test-1/source/form.html">Конкурс</a>
+              <a class="site-list__item-link" href="./form.html">Конкурс</a>
             </li>
             <li class="site-list__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
+              <a class="site-list__item-link" href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
             </li>
           </ul>
         </div>
       </nav>
+      <!--<div>
+        <img class="iphone-hand" src="../source/img/iphone-hand-mobile@1x.png" width="260px" height="290px">
+      </div>-->
     </header>
     <section class="download-app">
       <!-- Для кнопок можно сделать какой то один класс (btn - блок) сделать какой то общий который чаще всего повторяется, а потом через модификатры всякие например btn--download-app придавать им отличный дизайн от других кнопок на сайте. Я думаю тут наверное не тег <button>, а тег <a> так как при нажатии на эту кнопку она по логике должна переводить на другую страницу -->
       <div class="btn">
-        <a href="#" class="btn--download">Скачать приложение</a>
+        <a href="#" class="btn--download"><span>Скачать приложение</span></a>
       </div>
       <!--СДЕЛАНО Тут лучше вместо тега <p> для объединения какого либо контента использовать <div>, а для абзацев <p>, иконки тут будут потом вставленны не как img, а через тег svg, потом об этом лекция будет -->
-      <div>
-        <a class="download__ios" href="#"><img class="" src="../source/img/logo-apple.svg" width="47" height="56"> AppStore</a>
-        <a class="download__android" href="#"><img class="" src="../source/img/logo-android.svg" width="43" height="47"> Play Маркет</a>
-        <a class="download__wphone" href="#"><img class="" src="../source/img/logo-microsoft.svg" width="44" height="41"> Windows Store</a>
+      <div class="download-app__item">
+        <a class="download-app__item-link" href="#"><img class="" src="./img/logo-apple.svg" width="47" height="56"></a>
+        <a class="download-app__item-link" href="#"><img class="" src="./img/logo-android.svg" width="43" height="47"></a>
+        <a class="download-app__item-link" href="#"><img class="" src="./img/logo-microsoft.svg" width="44" height="42"></a>
       </div>
-      <p>
-        <!--СДЕЛАНО Тут можно не использовать тег <br> так как потом все равно ты ограничешь этот блок отступами в css и на планшетной и десктопной версии он может будет выглядить как вытянутый во всю строку -->
-        Доступно для IPhone, IPad, Android,
-        Windows Phone, OS X, Windows 8
-      </p>
+      <div class="access-app">
+        <span class="access-app__text">
+          <!--СДЕЛАНО Тут можно не использовать тег <br> так как потом все равно ты ограничешь этот блок отступами в css и на планшетной и десктопной версии он может будет выглядить как вытянутый во всю строку -->
+          Доступно для IPhone, IPad, Android,
+          Windows Phone, OS X, Windows 8
+        </span>
+      </div>
     </section>
 
 
@@ -65,25 +65,25 @@
         PINK - это приложение, которое позволит взглянуть на мир по другому
       </h1>
       <section class="advantages">
-        <h2 class="vissually-hidden">Наши преимущества</h2>
-        <p>Устали от серости мегаполиса?</p>
-        <p>Нам есть, что вам преджложть</p>
+        <h2 class="visually-hidden">Наши преимущества</h2>
+        <p class="question-answer">Устали от серости мегаполиса?</p>
+        <p class="question-answer">Нам есть, что вам преджложть</p>
           <ul class="advantages__list">
           <!-- Тут можно advantages__item сделать не как элемент, а как отдельный блок по БЭМ, так как точна такая же стилизация повтаряется у блока коментариев например (разметка в плане тегов может не обязательно повторятся, а вот стилизация будет одинаковая)-->
-            <li class="advantages-item">
+            <li class="advantages__list-item">
               <h3 class="advantages__title">Поднимает настроение</h3>
               <p class="advantages__description">Приложение позволит вам победить осенюю хандру и депрессию
                 буквально в несколько кликов!
               </p>
             </li>
-            <li class="advantages-item">
+            <li class="advantages__list-item">
               <h3 class="advantages__title">Меняет мир вокруг</h3>
               <p class="advantages__description">Сделайте снимок и украсьте его
                 смайликом или текстовой подписью,
                 чтобы усилить эффект
               </p>
             </li>
-            <li class="advantages-item">
+            <li class="advantages__list-item">
               <h3 class="advantages__title">Заводит новых друзей</h3>
               <p class="advantages__description">Ставьте лайки, комментируйте,
                 делитесь фотографиями с друзьями и
@@ -91,13 +91,37 @@
               </p>
             </li>
           </ul>
+          <div class="iphone-screen">
+            <img class="iphone-screen__smile" src="./img/iphone-screen-mobile@1x.png" width="157" height="320" alt="iphone hello pink">
+            <!--<img class="iphone-screen" src="./img/iphone-screen-mobile@1x.png" width="157" height="320" alt="iphone hello pink">
+            <img class="iphone-screen" src="./img/iphone-screen-mobile@1x.png" width="157" height="320" alt="iphone hello pink">-->
+          </div>
+      </section>
+      <section class="effect">
+        <div class="timer">
+          <img class="timer__outer-circle" src="./img/timer.svg" alt="timer" width="238" height="276">
+          <img class="timer__inner-circle" src="./img/diagram-fill.svg" alt="timer" width="202" height="202">
+          <span class="timer__hours">24</span>
+        </div>
+        <div class="description">
+          <h3 class="description__caption">
+            Эффект на 24 часа!
+          </h3>
+          <p class="description__scientists">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+        </div>
+        <div class="research">
+          <a class="research__link" href="#">Узнать больше об исследовании</a>
+        </div>
       </section>
       <section class="reviews">
         <!--ДОБАВЛЕНО тут добавить h2 не помешало с class="vissual-hidden" раз уж начал делать все как надо =) -->
         <h2 class="visually-hidden">Отзывы пользователей</h2>
         <div class="reviews__list">
           <blockquote class="reviews__item">
-            <cite class="reviews__author-name">Николай Петров</cite>
+            <cite class="reviews__author-name">
+              Николай Петров
+              <span class="reviews__author-name work">25 лет, водитель трамвая</span>
+            </cite>
             <p class="reviews__text">Это приложение перевернуло мой мир
               и позволило пр-новому взглянуть на
               привычные серые вещи! А еще я
@@ -105,8 +129,12 @@
               фотографии!
             </p>
           </blockquote>
+          <p class="reviews__toggles slider__toggles">
+            <button class="reviews__toggles">1</button>
+            <button class="reviews__toggles">2</button>
+            <button class="reviews__toggles">3</button>
+          </p>
         </div>
-
         <!-- Тут добавить из макета заготовку для пунктиров для слайдера =) хотя по сути его делать не нужно, но мы с тобой сделаем потом сами его -->
       </section>
       <section class="price-table">
@@ -124,6 +152,11 @@
           <tr><td>СМАЙЛИКИ <img class="check" src="http://placehold.it/150x100" width="20" height="20"></td></tr>
           <tr><td>КОММЕНТАРИИ <img class="check" src="http://placehold.it/150x100" width="20" height="20"></td></tr>
         </table>
+        <p class="reviews__toggles slider__toggles">
+          <button class="reviews__toggles">1</button>
+          <button class="reviews__toggles">2</button>
+          <button class="reviews__toggles">3</button>
+        </p>
       </section>
     </main>
 
@@ -131,7 +164,7 @@
       <h2 class="visually-hidden">Контаты</h2>
       <!--СДЕЛАНО Тут лучше использовать тег <section> так как его можно именовать как "блок контактов, и можно не писать класс элемент page-footer__contacts, а просто оставить как отельный блок contacts", так же добавить h2 с class="vissual-hidden" -->
       <section class="contacts">
-        <p>
+        <p class="contacts__qa">
           Остались вопросы?<br>
           Свяжитесь с нами!
         </p>
@@ -154,10 +187,40 @@
         </p>
       </section>
         <!--КАРТА БУДЕТ ДОБАВЛЕНА ЧЕРЕЗ JS Тут лучше сделать не <a> а <section> или <div> потом будет лекция сделать карту яндекс или гугл подключить =) но это как доп задача, а так можно будет оставить как картинку. Я потом кину видосик как на яндекс api сделать карту  -->
-        <section class="map">
-          Здесь будет карта<br>
-          <img src="http://placehold.it/150x100" alt="место расположение на карте" width="160" height="100">
-        </section>
+      <section class="map">
+        <img src="http://placehold.it/150x100" alt="map" width="320" height="200">
+      </section>
+
+      <section class="block-social">
+          <!--СДЕЛАНО обернуть img вспомогательный div выше писал об этом-->
+          <div class="">
+            <img class="page-footer__logo-image" src="./img/logo-pink-blue-mobile.svg" width="147" height="40">
+          </div>
+          <!--СДЕЛАНО тут можно обойтись без класса page-footer__social -->
+          <div class="social">
+            <ul class="social__list">
+              <li class="social__item">
+                <!-- social-button или social-btn, или можно сделать как btn (общий класс для всех кнопок), а потом через модификатор btn--social-btn придать нужный ввид, я бы их так назвал и по БЭМ вынес как отдельный блок, а не элемент social (тут я говорю не о html разметке блоки элементы, а в контексте css и классов именования бэм методологии =)). Потом так же мы картинки будем вставлять через тег svg чтобы можно было эффекты при наведении делать на них через css -->
+                <a class="social__link social__link-twitter" href="#"><img src="./img/icon-twitter.svg" alt="twitter" width="46" height="46"></a>
+              </li>
+              <li class="social__item">
+                  <a class="social__link social__link-facebook" href="#"><img src="./img/icon-facebook.svg" alt="facebook" width="46" height="46"></a>
+              </li>
+              <li class="social__item">
+                  <a class="social__link social__link-youtube" href="#"><img src="./img/icon-youtube.svg" alt="youtube" width="46" height="46"></a>
+              </li>
+            </ul>
+          </div>
+          <!--ИЗМЕНИНО article это нормльно все, но вот figure тут не нужен, он используется больше только для каких то фото, а для таких вещей он не нужен, и лучше этот блок обозвать как копирайт -->
+        <article class="copyright">
+
+            <span class="developer">Разработано</span>
+            <img class="logo-htmlacademy" src="./img/logo-htmlacademy.svg" alt="логотип htmlacademy" width="27" height="34">
+
+        </article>
+      </section>
     </footer>
+
+    <script src="./js/index.js"></script>
   </body>
 </html>
